@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Stropp - Cia. do Circuito</title>
+    <meta name="description" content="Site pessoal de Thiago Stropp, fundador da Cia. do Circuito, assistência técnica especializada em conserto de TVs, Notebooks e Videogames em Bauru.">
+    <meta name="keywords" content="Thiago Stropp, Cia do Circuito, Assistência Técnica Bauru, Conserto de TV, Conserto de Notebook, Conserto de Videogame">
+    <meta name="author" content="Thiago Stropp">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Thiago Stropp - Especialista em Tecnologia">
+    <meta property="og:description" content="Fundador da Cia. do Circuito, assistência técnica de excelência em Bauru.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thiagostropp.github.io/">
+
+    <!-- Schema.org JSON-LD para SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://thiagostropp.github.io/#person",
+          "name": "Thiago Stropp",
+          "jobTitle": "Fundador e Técnico Especialista",
+          "url": "https://thiagostropp.github.io",
+          "sameAs": [
+            "https://github.com/thiagostropp",
+            "https://www.instagram.com/thiagostropp/"
+          ],
+          "worksFor": {
+            "@id": "https://ciadocircuito.com.br/#organization"
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://ciadocircuito.com.br/#organization",
+          "name": "Cia. do Circuito",
+          "url": "http://ciadocircuito.com.br",
+          "description": "Assistência técnica especializada em Bauru para conserto de TVs, notebooks e videogames.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bauru",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+          },
+          "founder": {
+            "@id": "https://thiagostropp.github.io/#person"
+          },
+          "sameAs": [
+            "https://www.instagram.com/ciadocircuito/"
+          ]
+        }
+      ]
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --surface-color: rgba(25, 25, 25, 0.6);
+            --accent-glow: #3b82f6;
+            --accent-secondary: #8b5cf6;
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Animated background elements */
+        .blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.5;
+            animation: float 10s infinite alternate;
+        }
+        
+        .blob-1 {
+            top: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: rgba(59, 130, 246, 0.4);
+            border-radius: 50%;
+        }
+
+        .blob-2 {
+            bottom: 10%;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: rgba(139, 92, 246, 0.3);
+            border-radius: 50%;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); }
+            100% { transform: translateY(20px) scale(1.1); }
+        }
+
+        header {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .glitch-wrapper {
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+        }
+
+        header p {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section {
+            margin-bottom: 6rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-glow), var(--accent-secondary));
+            border-radius: 2px;
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: var(--surface-color);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-text {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(145deg, rgba(30,30,30,0.8), rgba(15,15,15,0.8));
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(96, 165, 250, 0.4);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* CTA & Social */
+        .social-links {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+            justify-content: center;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.1) rotate(5deg);
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(96, 165, 250, 0.4);
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, #2563eb, #7c3aed);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-secondary);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .glass-card { padding: 2rem; }
+            .section { margin-bottom: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ambient background glows -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <header>
+        <div class="glitch-wrapper">
+            <h1>Thiago Stropp</h1>
+        </div>
+        <p>Desenvolvedor, Entusiasta de Tecnologia & Fundador da Cia. do Circuito.</p>
+        <a href="#cia-do-circuito" class="btn-primary">Conheça meu trabalho</a>
+    </header>
+
+    <div class="container">
+        <!-- Sobre Mim Section -->
+        <section class="section">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="glass-card">
+                <p class="about-text">
+                    Olá! Sou Thiago, um apaixonado por tecnologia movido pelo desafio de resolver problemas complexos. Ao longo da minha jornada, mergulhei fundo no universo do hardware e do software, sempre buscando entender o funcionamento das coisas para otimizar, consertar e criar.
+                </p>
+                <p class="about-text">
+                    Acredito que a tecnologia deve servir para facilitar a vida das pessoas. É com essa mentalidade que encaro cada projeto, seja escrevendo código ou diagnosticando um equipamento eletrônico complexo.
+                </p>
+            </div>
+        </section>
+
+        <!-- Cia do Circuito Section -->
+        <section class="section" id="cia-do-circuito">
+            <h2 class="section-title">Cia. do Circuito</h2>
+            <p class="about-text" style="margin-bottom: 3rem;">
+                A <a href="http://ciadocircuito.com.br" title="Cia. do Circuito - Assistência Técnica" target="_blank" style="color: var(--accent-glow); text-decoration: none; font-weight: bold;">Cia. do Circuito</a> é a concretização da minha paixão por eletrônica. Localizada em Bauru, nossa <a href="http://ciadocircuito.com.br" title="Assistência Técnica de Eletrônicos em Bauru" target="_blank" style="color: var(--text-primary); text-decoration: underline; text-underline-offset: 4px;">assistência técnica especializada em conserto de TVs, notebooks e videogames</a> é referência em precisão e transparência. Trazemos equipamentos de volta à vida com engenharia de ponta e cuidado meticuloso.
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-microchip service-icon"></i>
+                    <h3><a href="http://ciadocircuito.com.br" target="_blank" style="color: #fff; text-decoration: none;">Eletrônica Avançada</a></h3>
+                    <p>Reparos complexos em placas-mãe, micro-soldagem e diagnósticos precisos em nível de componente.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-laptop-code service-icon"></i>
+                    <h3><a href="http://ciadocircuito.com.br" target="_blank" style="color: #fff; text-decoration: none;">Conserto de Notebooks e PCs</a></h3>
+                    <p>Performance ao máximo: upgrades, reparos estruturais, formatação e soluções definitivas para lentidão.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-gamepad service-icon"></i>
+                    <h3><a href="http://ciadocircuito.com.br" target="_blank" style="color: #fff; text-decoration: none;">Conserto de Videogames</a></h3>
+                    <p>Manutenção preventiva e corretiva para PlayStation, Xbox e Nintendo. Não deixe o jogo parar.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tv service-icon"></i>
+                    <h3><a href="http://ciadocircuito.com.br" target="_blank" style="color: #fff; text-decoration: none;">Conserto de TVs e Smart TVs</a></h3>
+                    <p>Troca de barramento de LED, reparo em placas T-Con e fontes. Imagem e som perfeitos novamente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section class="section">
+            <h2 class="section-title">Conecte-se</h2>
+            <div class="glass-card" style="text-align: center;">
+                <p class="about-text">
+                    Tem um projeto em mente, precisa de reparo no seu equipamento ou apenas quer trocar uma ideia sobre tecnologia?
+                </p>
+                
+                <div class="social-links">
+                    <a href="https://github.com/thiagostropp" target="_blank" class="social-icon" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/thiagostropp/" target="_blank" class="social-icon" title="Instagram Pessoal (@thiagostropp)">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="http://ciadocircuito.com.br" target="_blank" class="social-icon" title="Site da Cia. do Circuito">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ciadocircuito/" target="_blank" class="social-icon" title="Instagram da Empresa (@ciadocircuito)">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Thiago Stropp. Criado com dedicação e muito café. ☕</p>
+    </footer>
+
+</body>
+</html>
