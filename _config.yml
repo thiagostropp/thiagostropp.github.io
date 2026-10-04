@@ -1,0 +1,7 @@
+title: Thiago Stropp
+description: Eletrônica, infraestrutura física e nuvem. Fundador da Cia. do Circuito em Bauru, SP.
+url: https://thiagostropp.github.io
+exclude:
+  - README.md
+  - AGENTS.md
+  - scripts
